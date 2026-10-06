@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import ChaletIcon from '@mui/icons-material/Chalet';
+import Link from '@mui/material/Link';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -64,6 +65,18 @@ function Header() {
             LOGO <ChaletIcon/>
           </Typography>
 
+          <Link to={'/all-resumes'}>
+          
+          <Button variant="contained">All Resumes</Button>
+          
+          </Link>
+  
+            <Link to={'/downloads'}>
+          
+          <Button variant="contained">Downloads</Button>
+          
+          </Link>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -131,7 +144,7 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/src/image/logo.avif" />
               </IconButton>
             </Tooltip>
             <Menu
